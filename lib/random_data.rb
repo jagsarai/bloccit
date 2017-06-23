@@ -25,4 +25,14 @@ module RandomData
     letters[0,rand(3..8)].join
   end
 
+  def self.random_question
+    strings = []
+    rand(3..8).times do
+      strings << random_word
+    end
+
+    sentences = strings.join(" ")
+    sentences.capitalize << "?"
+  end
+
 end

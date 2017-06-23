@@ -45,7 +45,7 @@ RSpec.describe PostsController, type: :controller do
 
     it "renders the #new view" do
       get :new
-      expect(reponse).to render_template :new
+      expect(response).to render_template :new
     end
 
     it "instantiates @post" do
@@ -120,13 +120,13 @@ RSpec.describe PostsController, type: :controller do
   describe "DELETE destroy" do
 
     it "deletes the post" do
-      delete :destory, {id: my_post.id}
+      delete :destroy, {id: my_post.id}
       count = Post.where({id: my_post.id}).size
       expect(count).to eq 0
     end
 
     it "redirects to posts index" do
-      delete :destory, {id: my_post.id}
+      delete :destroy, {id: my_post.id}
       expect(response).to redirects_to posts_path
     end
 
