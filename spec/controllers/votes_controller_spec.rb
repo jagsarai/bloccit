@@ -73,7 +73,7 @@ RSpec.describe VotesController, type: :controller do
     end
 
     describe "POST down_vote" do
-      
+
       it "the users first vote increases number of post votes by one" do
         votes = user_post.votes.count
         post :down_vote, post_id: user_post.id
