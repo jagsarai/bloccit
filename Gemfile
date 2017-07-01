@@ -33,3 +33,5 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 #Used for encrypting User passwords
 gem 'bcrypt'
+#used to keep out API key and other data safe
+gem 'figaro', '1.0'
