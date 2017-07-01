@@ -52,7 +52,7 @@ RSpec.describe FavoritesController, type: :controller do
     end
 
     describe 'DELETE destroy' do
-      
+
       it 'redirects to the posts show view' do
         favorite = my_user.favorites.where(post: my_post).create
         delete :destroy, { post_id: my_post.id, id: favorite.id }
