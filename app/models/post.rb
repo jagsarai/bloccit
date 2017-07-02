@@ -32,4 +32,8 @@ class Post < ActiveRecord::Base
     update_attribute(:rank, new_rank)
   end
 
+  def find(id)
+    posts.where(id: id).first
+  end
+
 end
